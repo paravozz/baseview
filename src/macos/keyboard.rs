@@ -311,7 +311,7 @@ impl KeyboardState {
                         return None;
                     }
                 }
-                _ => unreachable!(),
+                _ => return None,
             };
             let is_composing = false;
             let repeat: bool = event_type == NSEventType::NSKeyDown && msg_send![event, isARepeat];
